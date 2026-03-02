@@ -1,25 +1,29 @@
-TÌM HIỂU VÀ TRIỂN KHAI MẠNG SDN (SOFTWARE DEFINED NETWORK) 
-Dự án nghiên cứu về kiến trúc mạng định nghĩa bằng phần mềm (SDN) và triển khai thực nghiệm mô hình mạng sử dụng giao thức OpenFlow.
+# 🚀 TÌM HIỂU VÀ TRIỂN KHAI MẠNG SDN (SOFTWARE DEFINED NETWORK)
 
-📋 Nội dung chính
-Nghiên cứu lý thuyết: Tổng quan về SDN, kiến trúc 3 lớp (Ứng dụng, Điều khiển, Hạ tầng) và giao thức OpenFlow.
+> [cite_start]**Dự án nghiên cứu chuyên sâu về kiến trúc mạng định nghĩa bằng phần mềm (SDN) và triển khai thực nghiệm mô hình mạng qua giao thức OpenFlow.** [cite: 8, 129]
 
-Giải pháp an toàn: Tìm hiểu các mối đe dọa (giả mạo traffic, lỗ hổng controller) và cách triển khai mạng an toàn trong SDN.
+---
 
-Thực nghiệm (Demo): Mô phỏng topo mạng trên Mininet và đo lường tác động của tấn công DDoS (ICMP Flood) bằng Hping3.
+### 📑 NỘI DUNG TRỌNG TÂM
 
-💻 Công cụ triển khai
-Môi trường: 02 máy ảo Ubuntu chạy song song.
+* [cite_start]**Lý thuyết:** Phân tích toàn diện kiến trúc 3 lớp gồm Application, Control và Infrastructure Layer[cite: 140].
+* [cite_start]**Giao thức:** Nghiên cứu tiêu chuẩn OpenFlow và cơ chế hoạt động của Flow Table[cite: 316, 326].
+* [cite_start]**An ninh mạng:** Nhận diện các mối đe dọa như giả mạo traffic, lỗ hổng Controller và cách triển khai bảo mật[cite: 410, 421, 425].
+* [cite_start]**Thực nghiệm:** Xây dựng mô phỏng topo mạng thực tế để đo lường khả năng chống chịu trước tấn công **DDoS (ICMP Flood)**[cite: 547, 662].
 
-SDN Controller: OpenDaylight (ODL).
+### 💻 HỆ THỐNG TRIỂN KHAI
 
-Mô phỏng mạng: Mininet.
+| Thành phần | Công cụ sử dụng |
+| :--- | :--- |
+| **Môi trường** | [cite_start]02 máy ảo Ubuntu chạy song song để tối ưu hiệu suất [cite: 534, 536] |
+| **SDN Controller** | [cite_start]**OpenDaylight (ODL)** - Bộ điều khiển trung tâm [cite: 450, 458] |
+| **Mô phỏng mạng** | [cite_start]**Mininet** - Giả lập Switch, Host và các liên kết [cite: 504, 508] |
+| **Phân tích & Tấn công** | [cite_start]**Iperf3** (Băng thông), **Hping3** (DDoS), **Wireshark** (Gói tin) [cite: 552, 553, 1159] |
 
-Đo lường & Tấn công: Iperf3, Hping3, Wireshark.
+### 📊 KẾT QUẢ ĐO LƯỜNG HIỆU SUẤT
 
-📊 Kết quả thực nghiệm
-Trạng thái bình thường: Băng thông đạt khoảng 5.48 Gbits/sec.
+* [cite_start]**Trạng thái bình thường:** Duy trì băng thông cực kỳ ổn định ở mức **~5.48 Gbits/sec**[cite: 657, 660].
+* [cite_start]**Khi bị tấn công DDoS:** Hệ thống bị quá tải lưu lượng, băng thông sụt giảm mạnh chỉ còn **~2.54 Gbits/sec**[cite: 668, 847].
+* [cite_start]**Phục hồi:** Sau khi ngừng tấn công, hiệu suất mạng lập tức trở lại mức **~5.58 Gbits/sec**[cite: 862, 956].
 
-Khi bị tấn công DDoS: Băng thông sụt giảm còn khoảng 2.54 Gbits/sec.
 
-Sau khi ngừng tấn công: Hiệu suất mạng phục hồi về mức ổn định ban đầu (~5.58 Gbits/sec).
