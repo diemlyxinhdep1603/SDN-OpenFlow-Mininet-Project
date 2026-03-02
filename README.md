@@ -1,4 +1,4 @@
-Tìm hiểu và Triển khai Mạng SDN (Software Defined Network)
+TÌM HIỂU VÀ TRIỂN KHAI MẠNG SDN (SOFTWARE DEFINED NETWORK) 
 Dự án nghiên cứu về kiến trúc mạng định nghĩa bằng phần mềm (SDN) và triển khai thực nghiệm mô hình mạng sử dụng giao thức OpenFlow.
 
 📋 Nội dung chính
